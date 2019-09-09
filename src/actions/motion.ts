@@ -172,7 +172,7 @@ class MoveDownFoldFix extends MoveByScreenLineMaintainDesiredColumn {
 
 @RegisterAction
 class MoveDown extends BaseMovement {
-  keys = ['j'];
+  keys = ['h'];
   doesntChangeDesiredColumn = true;
 
   public async execAction(position: Position, vimState: VimState): Promise<Position | IMovement> {
@@ -201,7 +201,7 @@ class MoveUpByScreenLineMaintainDesiredColumn extends MoveByScreenLineMaintainDe
 
 @RegisterAction
 class MoveUp extends BaseMovement {
-  keys = ['k'];
+  keys = ['t'];
   doesntChangeDesiredColumn = true;
 
   public async execAction(position: Position, vimState: VimState): Promise<Position | IMovement> {
@@ -299,7 +299,7 @@ class RightArrowInReplaceMode extends ArrowsInReplaceMode {
 
 @RegisterAction
 class CommandNextSearchMatch extends BaseMovement {
-  keys = ['n'];
+  keys = ['l'];
   isJump = true;
 
   public async execAction(position: Position, vimState: VimState): Promise<Position> {
@@ -329,7 +329,7 @@ class CommandNextSearchMatch extends BaseMovement {
 
 @RegisterAction
 class CommandPreviousSearchMatch extends BaseMovement {
-  keys = ['N'];
+  keys = ['L'];
   isJump = true;
 
   public async execAction(position: Position, vimState: VimState): Promise<Position> {
@@ -385,7 +385,7 @@ export class MarkMovement extends BaseMovement {
 }
 @RegisterAction
 export class MoveLeft extends BaseMovement {
-  keys = ['h'];
+  keys = ['d'];
 
   public async execAction(position: Position, vimState: VimState): Promise<Position> {
     if (shouldWrapKey(vimState, this.keysPressed)) {
@@ -413,7 +413,7 @@ class BackSpaceInNormalMode extends BaseMovement {
 
 @RegisterAction
 class MoveRight extends BaseMovement {
-  keys = ['l'];
+  keys = ['n'];
 
   public async execAction(position: Position, vimState: VimState): Promise<Position> {
     if (shouldWrapKey(vimState, this.keysPressed)) {
@@ -573,7 +573,7 @@ class MoveFindBackward extends BaseMovement {
 
 @RegisterAction
 class MoveTilForward extends BaseMovement {
-  keys = ['t', '<character>'];
+  keys = ['k', '<character>'];
 
   public async execActionWithCount(
     position: Position,
@@ -611,7 +611,7 @@ class MoveTilForward extends BaseMovement {
 
 @RegisterAction
 class MoveTilBackward extends BaseMovement {
-  keys = ['T', '<character>'];
+  keys = ['K', '<character>'];
 
   public async execActionWithCount(
     position: Position,

@@ -119,7 +119,7 @@ export class BaseOperator extends BaseAction {
 
 @RegisterAction
 export class DeleteOperator extends BaseOperator {
-  public keys = ['d'];
+  public keys = ['j'];
   public modes = [ModeName.Normal, ModeName.Visual, ModeName.VisualLine];
 
   /**
@@ -240,7 +240,7 @@ export class DeleteOperator extends BaseOperator {
 
 @RegisterAction
 export class DeleteOperatorVisual extends BaseOperator {
-  public keys = ['D'];
+  public keys = ['J'];
   public modes = [ModeName.Visual, ModeName.VisualLine];
 
   public async run(vimState: VimState, start: Position, end: Position): Promise<VimState> {
